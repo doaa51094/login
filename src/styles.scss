@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+$body-color: #191919;
+$black: #000;
+$white: #fff;
+$main: #fcea47;
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: $white;
+  font-family: "Urbanist", sans-serif;
+}
+.main-page {
+  min-height: 100vh;
+  background-color: $body-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  padding: 3rem 0;
+  width: 30%;
+  background-color: $black;
+  border-radius: 15px;
+
+  .logo-container {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .form-group {
+    margin: auto;
+    width: 80%;
+    margin-bottom: 15px;
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+    input {
+      width: 100%;
+      background-color: transparent;
+      border-color: $main;
+      padding: 10px 0;
+      color: $white;
+      padding-left: 10px;
+      border-radius: 5px;
+      outline: none;
+    }
+  }
+  .button-form {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    button {
+      background-color: $main;
+      border-radius: 5px;
+      padding: 8px 40px;
+      border: none;
+      font-weight: 600;
+    }
+  }
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 3rem;
+    background-color: $black;
+    color: $white;
+  }
+
+  .navbar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    .logo {
+      height: 40px;
+      width: auto;
+    }
+  }
+
+  .navbar-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: $black;
+    background-color: $main;
+    border: none;
+    border-radius: 4px;
+    img {
+      width: 18px;
+    }
+  }
+}
+@media (max-width: 786px) {
+.container{
+    width: 90%;
+    margin-top: 3rem;
+}
+nav .navbar{
+    padding: 14px 5px;
+}
+nav .navbar-button{
+    gap: 3px;
+    padding: 7px 9px;
+}
+}
