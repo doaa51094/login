@@ -1,4 +1,3 @@
-// Navbar.tsx
 import React from "react";
 import logo from "../assets/navbar-icon.svg";
 import website from "../assets/website-icon.svg";

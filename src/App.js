@@ -1,13 +1,21 @@
-import React from 'react'
-import './styles.scss';
-import { Login } from './components/Login';
+import React from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Home from './components/Home';
+import Login from './components/Login';
+import "./styles.scss";
 
 const App = () => {
   return (
     <div className='main-page'>
-         <Login/>
-    </div>
-  )
-}
+       <Routes>
+      <Route path="/login" element={<Login/>} />
+      <Route path="/home" element={<Home />} />
+      <Route path="*" element={<Navigate to="/login" />} />
 
-export default App
+    </Routes>
+    </div>
+   
+  );
+};
+
+export default App;

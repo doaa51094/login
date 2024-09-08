@@ -5,6 +5,8 @@ $white: #fff;
 $main: #fcea47;
 
 body {
+  background-color: $body-color;
+
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -12,8 +14,9 @@ body {
   font-family: "Urbanist", sans-serif;
 }
 .main-page {
+  position: relative;
+
   min-height: 100vh;
-  background-color: $body-color;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,6 +63,7 @@ body {
     align-items: center;
     width: 100%;
     button {
+      cursor: pointer;
       background-color: $main;
       border-radius: 5px;
       padding: 8px 40px;
@@ -110,16 +114,46 @@ nav {
     }
   }
 }
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid $black;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @media (max-width: 786px) {
-.container{
+  .container {
     width: 90%;
     margin-top: 3rem;
-}
-nav .navbar{
+  }
+  nav .navbar {
     padding: 14px 5px;
-}
-nav .navbar-button{
+  }
+  nav .navbar-button {
     gap: 3px;
     padding: 7px 9px;
-}
+  }
 }
